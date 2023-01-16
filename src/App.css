@@ -1,38 +1,144 @@
+body {
+    font-family: 'Playfair Display', serif;
+}
 .App {
-  text-align: center;
+    background: url(avo.jpeg);
+    object-fit: cover;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+article {
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: #436a45 3px solid;
+    border-radius: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #FFDCA9;
+    border-radius: 2px;
+    border-bottom: #436a45 3px solid;
+    border-radius: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+    color: #EF5B0C;
+    font-size: 45px;
+    margin: 3px;
+    text-shadow: 0.5px 0.5px 0.5px black;
 }
-
-.App-link {
-  color: #61dafb;
+.search {
+    height: 35px;
+    padding: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.avocado {
+    width: 80px;
+    margin-top: 20px;
+}
+.input {
+    padding: 0px 10px;
+    font-family: 'Metal', cursive;
+    width: 100%;
+    margin: 7px;
+    font-size: 25px;
+    border: 2px solid #436a45;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(121, 208, 152, 0.8);
+}
+.iconsContainer{
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    color: #436a45;
+    font-size: 28px;
+    text-shadow: 0.5px 0.5px 0.5px black;
+}
+h4 {
+    font-family: 'Metal', cursive;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #473C33;
+    background: url(kcal.png) left/25px no-repeat;
+    height: 28px;
+    padding: 0px 0px 0px 27px;
+    margin: 0px 30px 10px 0px;
+}
+.cuisine {
+    background: url(cusine.png) left/25px no-repeat;
+}
+.weight {
+    background: url(weight.png) left/25px no-repeat;
+}
+.calories {
+    background: url(kcal.png) left/25px no-repeat;
+}
+.mainImage {
+    border-radius: 50%;
+}
+ul {
+    list-style: none;
+    background-color: rgba(255, 220, 169, 0.7);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    min-width: 350px;
+}
+ul li {
+    background: url(done.png) left/25px no-repeat;
+    padding: 0px 0px 0px 40px;
+    margin: 0px 0px 15px 0px;
+    letter-spacing: 1.5px;
+    color: #473C33;
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: #EF5B0C 1px solid;
+}
+@media all and (max-width: 800px) {
+    h1 {
+        font-size: 40px;
+    }
+    .input {
+        margin: 5px;
+        font-size: 20px;
+    }
+    .avocado {
+        width: 68px;
+    }
+}
+@media all and (max-width: 500px) {
+    h1 {
+        font-size: 35px;
+    } 
+    .input {
+        font-size: 18px;
+    }
+    .avocado {
+        width: 60px;
+    } 
+    ul {
+        padding: 12px;
+        margin: 5px;
+        min-width: 350px;
+    }
+    ul li {
+        letter-spacing: 1px;
+    }
+    .mainImage {
+        width: 250px;
+        margin: 10px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    .search {
+        height: 30px;
+    }
 }
