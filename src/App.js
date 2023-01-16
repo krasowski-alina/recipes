@@ -11,13 +11,14 @@ function App() {
   const[recipes, setRecipes] = useState([]);
   const [word, setWord] = useState("avocado");
   useEffect(()=> {
-    getRecipe()
+    const getRecipe = async () =>{
+      const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${word}&app_id=${MY_ID}&app_key=${MY_KEY}`);
+      const data = await response.json();
+      setRecipes(data.hits);
+      }
+      getRecipe();
   }, [word])
-  const getRecipe = async () =>{
-  const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${word}&app_id=${MY_ID}&app_key=${MY_KEY}`);
-  const data = await response.json();
-  setRecipes(data.hits);
-  }
+
   const getInputValue = (e) => {
   setMySearch(e.target.value);
   }
@@ -50,7 +51,7 @@ function App() {
           ))}
         </section>
       </article>
-      
+
     </div>
   );
 }
